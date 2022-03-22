@@ -2,6 +2,7 @@ import io
 import json
 from types import SimpleNamespace
 
+import secrets
 from datetime import datetime
 
 from flask import Flask
@@ -16,6 +17,8 @@ def json2obj(s):
 def obj2dict(obj):
   d = json.loads(json.dumps(obj, default=lambda s: vars(s)))
   return d
+
+tracingId = secrets.token_hex(20)
 
 app = Flask(__name__)
 
@@ -38,7 +41,6 @@ def hello_world():
 def yapily_institutions():
   f = open('yapily/institutions.json')
   d = json2obj(f)
-  d.meta.tracingId = datetime.timestamp(datetime.now())
-  print("TracingId", d.meta.tracingId)
+  d.meta.tracingId = tracingId 
   data = obj2dict(d)
   return data
