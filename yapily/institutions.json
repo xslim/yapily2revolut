@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "tracingId": "acbb76db4ab8f4ac7f039d000456c13f",
+    "count": 1
+  },
+  "data": [
+    {
+      "id": "revolut-sandbox",
+      "name": "Revolut Sandbox",
+      "fullName": "Revolut Sandbox",
+      "countries": [
+        {
+          "displayName": "United Kingdom",
+          "countryCode2": "GB"
+        }
+      ],
+      "environmentType": "SANDBOX",
+      "credentialsType": "OPEN_BANKING_UK_AUTO",
+      "media": [
+        {
+          "source": "",
+          "type": "icon"
+        },
+        {
+          "source": "",
+          "type": "logo"
+        }
+      ],
+      "features": [
+        "INITIATE_DOMESTIC_SINGLE_PAYMENT"
+      ]
+    }
+  ]
+}
